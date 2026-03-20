@@ -1,0 +1,137 @@
+:root {
+    --text: hsl(0 0% 10%);
+    --bg: hsl(0 0% 100%);
+    --tint: hsl(220 14% 96%);
+    --muted: hsl(216 13% 84%);
+    --link: hsl(221 83% 53%);
+    --mark: hsl(46 87% 62%);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text: hsl(220 13% 91%);
+        --bg: hsl(211 74% 10%);
+        --tint: hsl(215 28% 17%);
+        --muted: hsl(217 19% 27%);
+        --link: hsl(213 94% 68%);
+    }
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family:
+        system-ui,
+        -apple-system,
+        sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text);
+    background: var(--bg);
+    max-width: 65ch;
+    margin: 0 auto;
+    padding: 1.5rem 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.2;
+    margin: 1.5rem 0 0.5rem;
+    font-weight: 700;
+}
+h1 {
+    font-size: 2rem;
+}
+h2 {
+    font-size: 1.4rem;
+}
+h3 {
+    font-size: 1.1rem;
+}
+
+p,
+ul,
+ol,
+blockquote,
+pre,
+table {
+    margin: 0 0 1rem;
+}
+
+a {
+    color: var(--link);
+    text-underline-offset: 3px;
+}
+
+ul,
+ol {
+    padding-left: 1.5rem;
+}
+li {
+    margin-bottom: 0.3rem;
+}
+
+blockquote {
+    border-left: 3px solid var(--muted);
+    margin: 1.25rem 0;
+    padding: 0.25rem 0 0.25rem 1rem;
+    color: var(--muted);
+}
+
+code {
+    background: var(--tint);
+    border-radius: 4px;
+    padding: 1px 5px;
+    font-size: 0.875em;
+    font-family: ui-monospace, monospace;
+}
+pre {
+    background: var(--tint);
+    border-radius: 8px;
+    padding: 1rem;
+    overflow-x: auto;
+}
+pre code {
+    background: none;
+    padding: 0;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--muted);
+    margin: 2rem 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+th {
+    text-align: left;
+    border-bottom: 2px solid var(--muted);
+    padding: 6px 10px;
+}
+td {
+    border-bottom: 1px solid var(--muted);
+    padding: 6px 10px;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 6px;
+    display: block;
+}
+
+mark {
+    color: var(--mark);
+    background: transparent;
+}
