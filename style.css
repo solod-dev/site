@@ -97,13 +97,15 @@ code {
 pre {
     background: var(--tint);
     border-radius: 8px;
-    padding: 1rem;
+    padding: 0;
     overflow-x: auto;
     line-height: 1.4;
 }
-pre code {
+pre > code {
     background: none;
-    padding: 0;
+    border-radius: 8px;
+    display: block;
+    padding: 1rem;
 }
 
 hr {
@@ -136,4 +138,22 @@ img {
 mark {
     color: var(--mark);
     background: transparent;
+}
+
+codapi-toolbar > button {
+    background: none;
+    border: 1px solid var(--link);
+    color: var(--link);
+    font-size: 1rem;
+    padding: 0.25rem 0.5rem;
+    cursor: pointer;
+}
+
+codapi-toolbar > button:hover {
+    background: var(--link);
+    color: var(--bg);
+}
+
+codapi-output > a {
+    text-decoration: none;
 }
