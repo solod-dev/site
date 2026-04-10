@@ -41,6 +41,8 @@
 
     <pre><code>package main
 
+import "solod.dev/so/time"
+
 type Person struct {
     Name string
     Age  int
@@ -59,6 +61,9 @@ func main() {
 
     p.Nums[0] = 42
     println("1st lucky number is", p.Nums[0])
+
+    year := time.Now().Year()
+    println("The year is", year)
 }
 </code></pre>
 
@@ -81,6 +86,9 @@ func main() {
     </p>
     <p>
         <a href="https://github.com/solod-dev/solod/tree/main/example">So by example</a>
+    </p>
+    <p>
+        <a href="https://github.com/solod-dev/solod/blob/main/bench/README.md">Benchmarks</a>
     </p>
     <p>
         <a href="https://github.com/solod-dev/solod">Source code</a>
