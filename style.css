@@ -54,6 +54,11 @@ h1 {
 h2 {
     font-size: 1.4rem;
 }
+h2 small {
+    font-size: 1rem;
+    color: var(--muted);
+    white-space: nowrap;
+}
 h3 {
     font-size: 1.1rem;
 }
