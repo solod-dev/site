@@ -45,31 +45,42 @@
 
     <pre><code>package main
 
-import "solod.dev/so/time"
+import (
+    "solod.dev/so/conc"
+    "solod.dev/so/mem"
+    "solod.dev/so/sync/atomic"
+)
 
-type Person struct {
-    Name string
-    Age  int
-    Nums [3]int
+// Account is a thread-safe money account.
+type Account struct {
+    Balance atomic.Int64
 }
 
-func (p *Person) Sleep() int {
-    p.Age += 1
-    return p.Age
+// Deposit adds an amount to the balance.
+func (a *Account) Deposit(amount int64) {
+    a.Balance.Add(amount)
+}
+
+// pay deposits $10 into the shared account.
+func pay(arg any) {
+    acc := arg.(*Account)
+    acc.Deposit(10)
 }
 
 func main() {
-    p := Person{Name: "Alice", Age: 30}
-    p.Sleep()
-    println(p.Name, "is now", p.Age, "years old.")
+    var acc Account
 
-    p.Nums[0] = 42
-    println("1st lucky number is", p.Nums[0])
+    // Run 100 payments across 4 worker threads.
+    opts := conc.PoolOptions{NumThreads: 4}
+    pool := conc.NewPool(mem.System, opts)
+    defer pool.Free()
+    for range 100 {
+        pool.Go(pay, &acc)
+    }
+    pool.Wait()
 
-    year := time.Now().Year()
-    println("The year is", year)
-}
-</code></pre>
+    println("balance is", acc.Balance.Load())
+}</code></pre>
 
     <codapi-snippet sandbox="so" editor="basic" actions="Translate:translate">
     </codapi-snippet>
