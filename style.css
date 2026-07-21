@@ -29,7 +29,7 @@ body {
         system-ui,
         -apple-system,
         sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.6;
     color: var(--text);
     background: var(--bg);
@@ -96,7 +96,7 @@ code {
     background: var(--tint);
     border-radius: 4px;
     padding: 1px 5px;
-    font-size: 0.875em;
+    font-size: 0.8em;
     font-family: ui-monospace, monospace;
 }
 pre {
@@ -145,6 +145,9 @@ mark {
     background: transparent;
 }
 
+codapi-toolbar {
+    font-size: 1rem;
+}
 codapi-toolbar > button {
     background: none;
     border: 1px solid var(--link);
@@ -153,12 +156,22 @@ codapi-toolbar > button {
     padding: 0.25rem 0.5rem;
     cursor: pointer;
 }
-
 codapi-toolbar > button:hover {
     background: var(--link);
     color: var(--bg);
 }
-
+codapi-toolbar > a,
 codapi-output > a {
     text-decoration: none;
+}
+
+@media (max-width: 480px) {
+    pre {
+        margin-left: -1rem;
+        margin-right: -1rem;
+        border-radius: 0;
+    }
+    pre > code {
+        border-radius: 0;
+    }
 }
