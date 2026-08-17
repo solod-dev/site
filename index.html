@@ -4,12 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="go-import" content="solod.dev git https://github.com/solod-dev/solod">
-    <meta name="go-import" content="solod.dev/sobind git https://github.com/solod-dev/sobind">
     <link rel="icon" href="logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/@antonz/codapi@0.20.0/dist/snippet.css" />
+
     <title>Solod</title>
+    <meta name="description" content="A subset of Go that translates to C with no runtime.">
+    <meta property="og:site_name" content="Solod" />
+    <meta property="og:title" content="Solod: Go can be a better C" />
+    <meta property="og:description" content="A subset of Go that translates to C with no runtime." />
+    <meta property="og:url" content="https://solod.dev/" />
+    <meta property="og:image" content="https://solod.dev/cover.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <meta name="go-import" content="solod.dev git https://github.com/solod-dev/solod">
+    <meta name="go-import" content="solod.dev/sobind git https://github.com/solod-dev/sobind">
 </head>
 
 <body>
@@ -29,7 +38,7 @@
         <li>Zero runtime. No garbage collection, no reference counting, no hidden allocations.</li>
         <li>Rich standard library. Use familiar types and functions ported from Go's stdlib.</li>
         <li>Native C interop. Call C from So and So from C — no CGO, no overhead.</li>
-        <li>Go tooling works out of the box. Syntax highlighting, LSP, linting and "go test".</li>
+        <li>Go tooling works out of the box. Syntax highlighting, LSP, linting and modules.</li>
     </ul>
     <p>
         So supports structs, methods, interfaces, slices, maps, multiple returns,
