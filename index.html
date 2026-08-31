@@ -23,9 +23,9 @@
 <body>
     <header>
         <hgroup>
-            <h1><mark>So</mark>lod: Go can be a better C</h1>
+            <h1>Solod: Go can be a better C</h1>
             <p>
-                Solod (<b>So</b>) is a strict subset of Go that translates to regular C.
+                Solod is a strict subset of Go that translates to regular C.
             </p>
         </hgroup>
         <img src="logo.svg" alt="" width="64" height="60" class="logo">
@@ -36,23 +36,23 @@
         <li>Go in, C out. You write regular Go code and get readable C11 as output.</li>
         <li>Zero runtime. No garbage collection, no reference counting, no hidden allocations.</li>
         <li>Rich standard library. Use familiar types and functions ported from Go's stdlib.</li>
-        <li>Native C interop. Call C from So and So from C — no CGO, no overhead.</li>
+        <li>Native C interop. Call C from Solod and Solod from C — no CGO, no overhead.</li>
         <li>Go tooling works out of the box. Syntax highlighting, LSP, linting and modules.</li>
     </ul>
     <p>
-        So supports structs, methods, interfaces, slices, maps, multiple returns,
+        Solod supports structs, methods, interfaces, slices, maps, multiple returns,
         and defer. Everything is stack-allocated by default; heap is opt-in through
         the standard library. There is limited support for generics, and concurrency
         is provided by the standard library instead of being built into the language.
     </p>
     <p>
-        So is for Go developers who want systems-level control without learning a new language.
-        And for C programmers who like Go's safety, structure, and tooling.
+        Solod is for Go developers who want systems-level control without learning a new
+        language. And for C programmers who like Go's safety, structure, and tooling.
     </p>
 
     <h2 id="try">Playground</h2>
     <p>
-        Here's some Go code in a file <code>main.go</code>.
+        Here's some Solod code in a file <code>main.go</code>.
         Click <i>Run</i> to execute it, or <i>Translate</i> to see the
         generated C code (<code>main.h</code> + <code>main.c</code>).
     </p>
@@ -96,18 +96,18 @@ func main() {
     println("balance is", acc.Balance.Load())
 }</code></pre>
 
-    <codapi-snippet sandbox="so" editor="basic" actions="Translate:translate">
+    <codapi-snippet sandbox="solod" editor="basic" actions="Translate:translate">
     </codapi-snippet>
 
     <h2 id="doc">Getting started</h2>
     <p>
-        Even though So isn't ready for production yet, I encourage you to try
+        Even though Solod isn't ready for production yet, I encourage you to try
         it out on a hobby project or just keep an eye on it if you like the concept.
     </p>
     <p>
         <a href="https://github.com/solod-dev/solod#installation">Installation</a> and
         <a href="https://github.com/solod-dev/solod#usage">usage</a>
-        to work with So locally.
+        to work with Solod locally.
     </p>
     <p>
         <a href="https://github.com/solod-dev/solod/blob/main/doc/spec.md">Language</a>
@@ -116,7 +116,7 @@ func main() {
         guides for a quick overview.
     </p>
     <p>
-        <a href="https://github.com/solod-dev/example">So by example</a>
+        <a href="https://github.com/solod-dev/example">Solod by example</a>
         for a hands-on introduction.
     </p>
     <p>
@@ -128,7 +128,7 @@ func main() {
         Current status 
         <small>v0.3 released</small>
     </h2>
-    <p>As of August 2026, So is in active development.</p>
+    <p>As of August 2026, Solod is in active development.</p>
     <p>
         The latest release is
         <a href="https://github.com/solod-dev/solod/releases/v0.3.0">0.3</a>,
